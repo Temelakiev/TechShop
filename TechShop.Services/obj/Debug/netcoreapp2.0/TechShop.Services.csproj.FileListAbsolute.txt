@@ -1,0 +1,9 @@
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\bin\Debug\netcoreapp2.0\TechShop.Services.deps.json
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\bin\Debug\netcoreapp2.0\TechShop.Services.dll
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\bin\Debug\netcoreapp2.0\TechShop.Services.pdb
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.csprojResolveAssemblyReference.cache
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.csproj.CoreCompileInputs.cache
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.AssemblyInfoInputs.cache
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.AssemblyInfo.cs
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.dll
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Services\obj\Debug\netcoreapp2.0\TechShop.Services.pdb
