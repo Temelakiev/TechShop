@@ -1,6 +1,5 @@
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.csprojResolveAssemblyReference.cache
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.csproj.CoreCompileInputs.cache
-C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.AssemblyInfoInputs.cache
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.AssemblyInfo.cs
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\bin\Debug\netcoreapp2.0\TechShop.Web.deps.json
@@ -16,3 +15,4 @@ C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\bin\Debug\netcoreapp2.0\TechShop.Services.pdb
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.dll
 C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\TechShop.Web.pdb
+C:\Users\Temelakiev\Documents\Visual Studio 2017\Projects\TechShop\TechShop.Web\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

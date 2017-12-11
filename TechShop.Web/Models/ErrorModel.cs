@@ -1,7 +1,7 @@
-using System;
-
 namespace TechShop.Web.Models
 {
+    using System;
+
     public class ErrorModel
     {
         public string RequestId { get; set; }
