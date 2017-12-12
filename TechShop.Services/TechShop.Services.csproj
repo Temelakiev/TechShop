@@ -17,4 +17,8 @@
     <Folder Include="Implementations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TechShop.Data\TechShop.Data.csproj" />
+  </ItemGroup>
+
 </Project>

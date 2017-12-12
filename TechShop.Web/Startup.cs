@@ -58,6 +58,7 @@
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseDatabaseMigration();
 
             if (env.IsDevelopment())
             {
@@ -77,6 +78,10 @@
             app.UseMvc(routes =>
             {
 
+
+                routes.MapRoute(
+                    name: "areas",
+                    template: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 
                 routes.MapRoute(
                     name: "default",
