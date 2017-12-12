@@ -1,6 +1,7 @@
 ﻿namespace TechShop.Data.Models
 {
     using Microsoft.AspNetCore.Identity;
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using static DataConstants;
@@ -18,8 +19,8 @@
         [MaxLength(NameMaxLength)]
         public override string Email { get; set; }
 
-        [Range(5,99)]
-        public int Age { get; set; }
+        
+        public DateTime Birthdate { get; set; }
 
         [MinLength(AddressMinLength)]
         [MaxLength(AddressMaxLength)]
