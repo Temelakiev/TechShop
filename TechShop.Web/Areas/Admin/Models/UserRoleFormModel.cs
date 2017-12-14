@@ -2,7 +2,7 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class AddUserToRoleFormModel
+    public class UserRoleFormModel
     {
         [Required]
         public string UserId { get; set; }
