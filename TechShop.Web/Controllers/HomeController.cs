@@ -3,14 +3,24 @@
     using System.Diagnostics;
     using Microsoft.AspNetCore.Mvc;
     using TechShop.Web.Models;
-
+    using TechShop.Services.Admin;
+    using TechShop.Web.Models.Home;
+    using System.Threading.Tasks;
 
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly IAdminCategoryService categories;
+
+        public HomeController(IAdminCategoryService categories)
         {
-            return View();
+            this.categories = categories;
         }
+
+        public async Task<IActionResult> Index()
+            => View(new HomeIndexViewModel
+            {
+                Categories = await this.categories.AllAsync()
+            });
         
         public IActionResult Error()
         {

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<AdminCategoryModel>
+
+@foreach (var category in Model)
+{
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>
+                    <a asp-controller="Categories" asp-action="Details" asp-route-id="@category.Id">@category.Name</a>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <img height="200" src="@category.PictureUrl" class="img-thumbnail "/>
+            </div>
+        </div>
+    </div>
+}

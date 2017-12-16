@@ -1,0 +1,39 @@
+﻿@model CategoryDetailsViewModel
+
+@{
+    ViewData["Title"] = $"Category: {Model.Name}";
+}
+
+<h2>@ViewData["Title"]</h2>
+@if (User.IsInRole(WebConstants.ModeratorRole))
+{
+    <a asp-area="Moderator" asp-controller="Products" asp-action="CreateProduct" asp-route-id="@Model.Id" class="btn btn-primary">Create Product</a>
+}
+@if (Model.Products.Count > 0)
+{
+    <div class="row">
+        @foreach (var product in Model.Products)
+        {
+            <div class="col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3>
+                            <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">@product.Name</a>
+                        </h3>
+                    </div>
+                    <div>
+                        <img height="200" src="@product.ImageUrl" class="img-thumbnail img-responsive" />
+                        <div>@product.Price$</div>
+                        <div>@product.Quantity</div>
+                        <div>@product.Description</div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+
+
+
+
