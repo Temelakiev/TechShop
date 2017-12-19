@@ -1,12 +1,8 @@
 ﻿namespace TechShop.Web.Controllers
 {
     using Microsoft.AspNetCore.Mvc;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
     using TechShop.Services;
     using TechShop.Web.Models.Category;
-    using TechShop.Web.Models.Product;
 
     public class CategoriesController : Controller
     {

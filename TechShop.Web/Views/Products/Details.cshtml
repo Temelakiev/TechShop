@@ -1,0 +1,23 @@
+﻿@model ProductInCategoryViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>@Model.Name</h2>
+
+@if (User.IsInRole(WebConstants.ModeratorRole))
+{
+    <a asp-area="Moderator" class="btn btn-default btn-group-sm" asp-controller="ModeratorProducts" asp-action="Edit" asp-route-id="@Model.Id">Edit @Model.Name</a>
+    <a asp-area="Moderator" class="btn btn-danger" asp-controller="ModeratorProducts" asp-action="Delete" asp-route-id="@Model.Id">Delete @Model.Name</a>
+}
+<div><img src="@Model.ImageUrl" /></div>
+<div><strong>Available quantity:</strong> @Model.Quantity</div>
+<div><strong>Price:</strong> @Model.Price $</div>
+<div><strong>Description:</strong> @Model.Description</div>
+
+
+
+
+
+

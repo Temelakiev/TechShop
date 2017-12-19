@@ -37,5 +37,29 @@
             await this.db.SaveChangesAsync();
             
         }
+
+        public async Task Delete(int id)
+        {
+            var product = this.ById(id);
+
+            this.db.Remove(product);
+
+            await this.db.SaveChangesAsync();
+        }
+
+        public async Task Edit(int id, string name, string imageUrl, decimal price, int quantity, string description)
+        {
+            var product = this.ById(id);
+
+            product.Name = name;
+            product.ImageUrl = imageUrl;
+            product.Price = price;
+            product.Quantity = quantity;
+            product.Description = description;
+
+            this.db.Update(product);
+
+            await this.db.SaveChangesAsync();
+        }
     }
 }

@@ -1,10 +1,5 @@
 ﻿namespace TechShop.Web.Models.Product
 {
-    using AutoMapper;
-    using Data.Models;
-    using LearningSystem.Common.Mapping;
-    using TechShop.Common.Mapping;
-
     public class ProductInCategoryViewModel 
     {
         public int Id { get; set; }
