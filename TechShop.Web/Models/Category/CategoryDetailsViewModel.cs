@@ -1,7 +1,10 @@
 ﻿namespace TechShop.Web.Models.Category
 {
+    using System;
     using System.Collections.Generic;
     using TechShop.Data.Models;
+    using TechShop.Services.Models.Categories;
+    using static Services.ServiceConstants;
 
     public class CategoryDetailsViewModel
     {
@@ -9,7 +12,17 @@
 
         public string Name { get; set; }
 
-        public List<Product> Products { get; set; }
+        public IEnumerable<ProductListingsServiceModel> Products { get; set; }
+
+        public int TotalProducts { get; set; }
+
+        public int TotalPages => (int)Math.Ceiling((double)this.TotalProducts / CategoryProductsPageSize);
+
+        public int CurrentPage { get; set; }
+
+        public int NextPage => this.CurrentPage == this.TotalPages ? this.TotalPages : this.CurrentPage + 1;
+
+        public int PreviousPage => this.CurrentPage <= 1 ? 1 : this.CurrentPage - 1;
 
     }
 }

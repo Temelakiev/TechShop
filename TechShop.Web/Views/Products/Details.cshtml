@@ -12,7 +12,16 @@
     <a asp-area="Moderator" class="btn btn-danger" asp-controller="ModeratorProducts" asp-action="Delete" asp-route-id="@Model.Id">Delete @Model.Name</a>
 }
 <div><img src="@Model.ImageUrl" /></div>
-<div><strong>Available quantity:</strong> @Model.Quantity</div>
+<div>
+    <strong>Available quantity:</strong> @if (Model.Quantity == 0)
+    {
+        <span style="color:red">Out of stock!</span>
+    }
+    else
+    {
+        <div>Available quantity: @Model.Quantity</div>
+    }
+</div>
 <div><strong>Price:</strong> @Model.Price $</div>
 <div><strong>Description:</strong> @Model.Description</div>
 
