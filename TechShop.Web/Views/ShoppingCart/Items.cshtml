@@ -1,0 +1,23 @@
+﻿@model IList<CartItemViewModel>
+
+@{
+    ViewData["Title"] = "Items";
+}
+
+<h2>Items in cart</h2>
+
+@foreach (var item in Model)
+{
+    <div>@item.Title - @item.Price - Quantity: @item.Quantity</div>
+}
+
+@if (Model.Count > 0)
+{
+    <hr />
+    <div>Total Price: @Model.Sum(p => p.Price * p.Quantity)$</div>
+    <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="FinishOrder">Finish Order</a>
+}
+else
+{
+    <h3 style="color:brown">Your cart is empty!</h3>
+}

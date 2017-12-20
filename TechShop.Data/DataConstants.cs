@@ -21,7 +21,7 @@
         public const int CategoryNameMaxLength = 30;
 
         public const int PictureUrlMinLength = 5;
-        public const int PictureUrlMaxLength = 100;
+        public const int PictureUrlMaxLength = 1000;
 
         //Comment data model constants:
         public const int ContentMinLength = 4;

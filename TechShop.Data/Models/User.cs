@@ -18,10 +18,10 @@
         [MinLength(NameMinLength)]
         [MaxLength(NameMaxLength)]
         public override string Email { get; set; }
-
         
         public DateTime Birthdate { get; set; }
 
+        [Required]
         [MinLength(AddressMinLength)]
         [MaxLength(AddressMaxLength)]
         public string Address { get; set; }

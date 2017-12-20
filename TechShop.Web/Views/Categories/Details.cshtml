@@ -33,6 +33,7 @@
                             <div>Available quantity: @product.Quantity</div>
                         }
                     </div>
+                    <a class="btn btn-success" asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@product.Id">Add to Cart</a>
                 </div>
             </div>
         }

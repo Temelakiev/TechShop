@@ -22,13 +22,16 @@
                 .Entity<Category>()
                 .HasMany(c => c.Products)
                 .WithOne(p => p.Category)
-                .HasForeignKey(p => p.CategoryId);
+                .HasForeignKey(p => p.CategoryId)
+                .OnDelete(DeleteBehavior.Restrict);
+                
 
             builder
                 .Entity<Product>()
                 .HasMany(p => p.Comments)
                 .WithOne(c => c.Product)
-                .HasForeignKey(c => c.ProductId);
+                .HasForeignKey(c => c.ProductId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder
                 .Entity<Order>()

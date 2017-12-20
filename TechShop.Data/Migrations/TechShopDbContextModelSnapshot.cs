@@ -4,7 +4,6 @@
     using Microsoft.EntityFrameworkCore.Infrastructure;
     using Microsoft.EntityFrameworkCore.Metadata;
     using System;
-    using TechShop.Data;
 
     [DbContext(typeof(TechShopDbContext))]
     partial class TechShopDbContextModelSnapshot : ModelSnapshot
@@ -134,7 +133,7 @@
                         .HasMaxLength(30);
 
                     b.Property<string>("PictureUrl")
-                        .HasMaxLength(100);
+                        .HasMaxLength(1000);
 
                     b.HasKey("Id");
 
@@ -173,6 +172,8 @@
                         .HasMaxLength(150);
 
                     b.Property<string>("CustomerId");
+
+                    b.Property<decimal>("TotalPrice");
 
                     b.HasKey("Id");
 
@@ -215,6 +216,10 @@
 
                     b.Property<int>("ProductId");
 
+                    b.Property<decimal>("ProductPrice");
+
+                    b.Property<int>("Quantity");
+
                     b.HasKey("OrderId", "ProductId");
 
                     b.HasIndex("ProductId");
@@ -230,6 +235,7 @@
                     b.Property<int>("AccessFailedCount");
 
                     b.Property<string>("Address")
+                        .IsRequired()
                         .HasMaxLength(150);
 
                     b.Property<DateTime>("Birthdate");
@@ -336,7 +342,7 @@
                     b.HasOne("TechShop.Data.Models.Product", "Product")
                         .WithMany("Comments")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("TechShop.Data.Models.Order", b =>
@@ -351,7 +357,7 @@
                     b.HasOne("TechShop.Data.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
                 });
 
             modelBuilder.Entity("TechShop.Data.Models.ProductOrder", b =>

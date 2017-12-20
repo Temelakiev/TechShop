@@ -1,0 +1,33 @@
+﻿@model PostCommentViewModel
+@{
+    ViewData["Title"] = "Post Comment";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<head>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script>tinymce.init({ selector: '#Content' });</script>
+</head>
+<div class="row">
+    <div class="col-md-8">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <textarea asp-for="@Model.Content" rows="5" class="form-control"></textarea>
+                <span asp-validation-for="@Model.Content" class="text-danger"></span>
+            </div>
+           
+
+            <button type="submit" class="btn btn-success">Post</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+
+
+

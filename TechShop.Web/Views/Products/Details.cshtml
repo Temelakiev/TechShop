@@ -24,6 +24,17 @@
 </div>
 <div><strong>Price:</strong> @Model.Price $</div>
 <div><strong>Description:</strong> @Model.Description</div>
+<a class="btn btn-success" asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@Model.Id">Add to Cart</a>
+
+<a class="btn btn-default" asp-controller="Comments" asp-action="PostComment" asp-route-id="@Model.Id">Post a comment</a>
+
+@foreach (var comment in Model.Comments)
+{
+    <div>@Html.Raw(comment.Content)</div>
+    
+}
+
+
 
 
 

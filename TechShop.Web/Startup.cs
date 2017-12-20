@@ -11,6 +11,8 @@
     using AutoMapper;
     using TechShop.Web.Infrastructure.Extensions;
     using Microsoft.AspNetCore.Mvc;
+    using TechShop.Services;
+    using TechShop.Services.Implementations.ShoppingCarts;
 
     public class Startup
     {
@@ -41,6 +43,10 @@
             })
                 .AddEntityFrameworkStores<TechShopDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddSingleton<IShoppingCartManager, ShoppingCartManager>();
+
+            services.AddSession();
 
             services.AddAutoMapper();
 
@@ -74,6 +80,8 @@
             app.UseStaticFiles();
 
             app.UseAuthentication();
+
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

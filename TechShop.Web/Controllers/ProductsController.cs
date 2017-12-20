@@ -22,6 +22,8 @@
                 return NotFound();
             }
 
+            var comments = this.products.GetComments(id);
+
             return View(new ProductInCategoryViewModel
             {
                 Id=id,
@@ -29,7 +31,8 @@
                 Name=product.Name,
                 Description=product.Description,
                 Price=product.Price,
-                Quantity=product.Quantity
+                Quantity=product.Quantity,
+                Comments=comments
             });
         }
     }

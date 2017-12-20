@@ -1,5 +1,8 @@
 ﻿namespace TechShop.Web.Models.Product
 {
+    using System.Collections.Generic;
+    using TechShop.Data.Models;
+
     public class ProductInCategoryViewModel 
     {
         public int Id { get; set; }
@@ -14,6 +17,6 @@
 
         public string ImageUrl { get; set; }
 
-        
+        public List<Comment> Comments { get; set; }
     }
 }
