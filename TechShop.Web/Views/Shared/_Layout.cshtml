@@ -6,9 +6,9 @@
     <title>@ViewData["Title"] - TechShop</title>
 
     <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min2.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <link rel="icon" href="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/blue-metallic-orbs-icons-business/078725-blue-metallic-orb-icon-business-computer-desktop1.png"/>
+        <link rel="icon" href="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/blue-metallic-orbs-icons-business/078725-blue-metallic-orb-icon-business-computer-desktop1.png" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -21,22 +21,20 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">TechShop</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-toggle">
                 <ul class="nav navbar-nav">
                     @if (User.IsInRole(WebConstants.AdministratorRole))
                     {
                         <li><a asp-area="Admin" asp-controller="Users" asp-action="Index">Users</a></li>
                         <li><a asp-area="Admin" asp-controller="Categories" asp-action="Index">Categories</a></li>
                     }
-                    <li><a asp-area="" asp-controller="ShoppingCart" asp-action="Items">Shopping cart</a></li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a asp-area="" asp-controller="ShoppingCart" asp-action="Items">Shopping cart</a></li>
+                    }
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
