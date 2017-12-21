@@ -1,0 +1,22 @@
+﻿@model SearchViewModel
+
+@{
+    ViewData["Title"] = $"Search Results {Model.SearchText}";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (Model.Products.Any())
+{
+    <h3>Found products</h3>
+
+    <div class="row">
+        @await Html.PartialAsync("_ProductsListingsPartial", Model.Products)
+    </div>
+}
+else
+{
+    <h3>No products to show.</h3>
+}
+
+

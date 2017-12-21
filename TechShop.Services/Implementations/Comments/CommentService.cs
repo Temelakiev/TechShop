@@ -1,5 +1,6 @@
 ﻿namespace TechShop.Services.Implementations.Comments
 {
+    using System.Linq;
     using System.Threading.Tasks;
     using TechShop.Data;
     using TechShop.Data.Models;
@@ -17,6 +18,7 @@
 
         public async Task CreateAsync(string content, int productId, string authorId)
         {
+
             var comment = new Comment
             {
                 AuthorId = authorId,

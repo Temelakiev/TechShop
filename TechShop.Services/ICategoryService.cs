@@ -14,5 +14,7 @@
         Task<int> TotalAsync(int categoryId);
 
         Task<IEnumerable<ProductListingsServiceModel>> AllAsync(int id,int page);
+
+        Task<IEnumerable<ProductListingsServiceModel>> Find(string searchText);
     }
 }

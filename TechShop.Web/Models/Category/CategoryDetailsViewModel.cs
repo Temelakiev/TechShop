@@ -2,11 +2,11 @@
 {
     using System;
     using System.Collections.Generic;
-    using TechShop.Data.Models;
     using TechShop.Services.Models.Categories;
+    using TechShop.Web.Models.Home;
     using static Services.ServiceConstants;
 
-    public class CategoryDetailsViewModel
+    public class CategoryDetailsViewModel : SearchFormModel
     {
         public int Id { get; set; }
 

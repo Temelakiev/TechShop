@@ -33,3 +33,7 @@
         display: none;
     }
 }
+
+body.body-content {
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/itCjTBE/bright-blue-waves-elegant-abstract-background-video-corporate-animation-hd-1920x1080_4jj1mcrgg__F0000.png");
+}

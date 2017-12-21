@@ -3,11 +3,13 @@
 @{ 
     ViewData["Title"] = "All Categories";
 }
-
-<div class="jumbotron home-jumbotron">
-    <h1 class="text-center">Wellcome to our store!</h1>
+<div class="text-center">
+    <img class="jumbotron home-jumbotron" src="https://cmkt-image-prd.global.ssl.fastly.net/0.1.0/ps/1230602/580/386/m1/fpnw/wm0/1-.jpg?1462195387&s=5bda2312d3bd2896c9d5da378613e9c2" />
 </div>
-
+ 
+<hr />
+<h3 class="text-center">Categories:</h3>
+<br />
 <div class="row">
     @await Html.PartialAsync("_CategoryListingsPartial",Model.Categories)
 </div>

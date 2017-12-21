@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ProductListingsServiceModel>
+
+@foreach (var product in Model)
+{
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center">
+                    <a asp-controller="Products" asp-action="Details" asp-route-id="@product.Id">@product.Name</a>
+                </h3>
+            </div>
+            <div class="panel-body">
+                <img height="200" src="@product.ImageUrl" class="img-responsive" />
+                <br />
+            </div>
+        </div>
+    </div>
+}

@@ -19,6 +19,18 @@
             this.db = db;
         }
 
+        public async Task<IEnumerable<ProductListingsServiceModel>> Find(string searchText)
+        {
+            searchText = searchText ?? string.Empty;
+
+            return await this.db
+            .Products
+            .OrderBy(p => p.Name)
+            .Where(p => p.Name.ToLower().Contains(searchText.ToLower()))
+            .ProjectTo<ProductListingsServiceModel>()
+            .ToListAsync();
+        }
+
         public async Task<IEnumerable<ProductListingsServiceModel>> AllAsync(int id, int page)
              => await this.db
             .Products

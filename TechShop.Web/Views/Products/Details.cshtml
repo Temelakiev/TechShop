@@ -30,7 +30,6 @@
 @foreach (var comment in Model.Comments)
 {
     <div>@Html.Raw(comment.Content)</div>
-    <small>published by: @comment.AuthorId</small>
 }
 
 
