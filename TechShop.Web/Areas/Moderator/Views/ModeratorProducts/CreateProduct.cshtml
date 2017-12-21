@@ -6,47 +6,8 @@
 
 <h2>@ViewData["Title"]</h2>
 
-<head>
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
-    <script>tinymce.init({ selector: '#Content' });</script>
-</head>
-<div class="row">
-    <div class="col-md-8">
-        <form method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="ImageUrl"></label>
-                <input asp-for="ImageUrl" class="form-control" />
-                <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Name"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description"></label>
-                <textarea asp-for="Description" rows="5"  class="form-control" ></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price"></label>
-                <input asp-for="Price" rows="30" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantity"></label>
-                <input asp-for="Quantity" rows="30" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-            
-            <button type="submit" class="btn btn-default">Create Product</button>
-        </form>
-    </div>
-</div>
-
-@section Scripts{
-    @await Html.PartialAsync("_ValidationScriptsPartial")
+@{ 
+    Html.RenderPartial("_ModeratorPartial");
 }
 
 

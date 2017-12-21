@@ -46,6 +46,6 @@
             => this.carts.GetOrAdd(id, new ShoppingCart());
 
         public User CurrentUser(string id)
-            => this.db.Users.Where(u => u.Id == id).FirstOrDefault();
+            => this.db.Users.Where(u=>u.Id == id).FirstOrDefault();
     }
 }

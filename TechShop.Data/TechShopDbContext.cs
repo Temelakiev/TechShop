@@ -23,7 +23,7 @@
                 .HasMany(c => c.Products)
                 .WithOne(p => p.Category)
                 .HasForeignKey(p => p.CategoryId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
                 
 
             builder
@@ -31,7 +31,7 @@
                 .HasMany(p => p.Comments)
                 .WithOne(c => c.Product)
                 .HasForeignKey(c => c.ProductId)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder
                 .Entity<Order>()

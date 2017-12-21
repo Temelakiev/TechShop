@@ -13,6 +13,12 @@
     using Microsoft.AspNetCore.Mvc;
     using TechShop.Services;
     using TechShop.Services.Implementations.ShoppingCarts;
+    using TechShop.Services.Admin;
+    using TechShop.Services.Admin.Implementations;
+    using TechShop.Services.Implementations.Categories;
+    using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+    using TechShop.Services.Implementations.Products;
+    using System.Net.Http;
 
     public class Startup
     {
