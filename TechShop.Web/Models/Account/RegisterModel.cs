@@ -21,6 +21,7 @@
         [MinLength(AddressMinLength)]
         [MaxLength(AddressMaxLength)]
         [DataType(DataType.Text)]
+        [Required]
         public string Address { get; set; }
 
         [Required]
