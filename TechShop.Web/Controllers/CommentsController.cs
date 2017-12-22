@@ -50,7 +50,7 @@
 
             await this.comments.CreateAsync(model.Content, id, authorId);
 
-            TempData.AddSuccuessMessage($"You comment has been posted!");
+            TempData.AddSuccuessMessage($"Your comment has been posted!");
 
             return RedirectToAction(nameof(ProductsController.Details), "Products", new { area = string.Empty, id = id.ToString() });
         }

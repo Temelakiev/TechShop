@@ -3,7 +3,6 @@
     using AutoMapper.QueryableExtensions;
     using Microsoft.EntityFrameworkCore;
     using System.Collections.Generic;
-
     using System.Threading.Tasks;
     using TechShop.Data;
     using TechShop.Services.Admin.Models;

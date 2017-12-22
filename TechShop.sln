@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechShop.Web", "TechShop.Web\TechShop.Web.csproj", "{AA71D791-C0AA-4DD7-B2F5-51FAC691DB64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechShop.Web", "TechShop.Web\TechShop.Web.csproj", "{AA71D791-C0AA-4DD7-B2F5-51FAC691DB64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechShop.Data", "TechShop.Data\TechShop.Data.csproj", "{765F02B9-A7C1-44B2-BFCE-FDE14CCB6A6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechShop.Data", "TechShop.Data\TechShop.Data.csproj", "{765F02B9-A7C1-44B2-BFCE-FDE14CCB6A6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechShop.Services", "TechShop.Services\TechShop.Services.csproj", "{AE4B944A-6738-4D56-8F51-43904FBE1AA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechShop.Services", "TechShop.Services\TechShop.Services.csproj", "{AE4B944A-6738-4D56-8F51-43904FBE1AA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechShop.Common", "TechShop.Common\TechShop.Common.csproj", "{B249A976-A2FF-4CAF-8F4F-2EEED113CD47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechShop.Common", "TechShop.Common\TechShop.Common.csproj", "{B249A976-A2FF-4CAF-8F4F-2EEED113CD47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechShop.Test", "TechShop.Test\TechShop.Test.csproj", "{EDE6D02B-D825-4B4F-B198-4F83233F7E5C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B249A976-A2FF-4CAF-8F4F-2EEED113CD47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B249A976-A2FF-4CAF-8F4F-2EEED113CD47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B249A976-A2FF-4CAF-8F4F-2EEED113CD47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE6D02B-D825-4B4F-B198-4F83233F7E5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE6D02B-D825-4B4F-B198-4F83233F7E5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE6D02B-D825-4B4F-B198-4F83233F7E5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE6D02B-D825-4B4F-B198-4F83233F7E5C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -19,6 +19,11 @@
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using TechShop.Services.Implementations.Products;
     using System.Net.Http;
+    using TechShop.Services.Html;
+    using TechShop.Services.Html.Implementations;
+    using TechShop.Services.Moderator;
+    using TechShop.Services.Moderator.Implementations;
+    using TechShop.Services.Implementations.Comments;
 
     public class Startup
     {
@@ -40,7 +45,7 @@
             services.AddDbContext<TechShopDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<User, IdentityRole>(options=> 
+            services.AddIdentity<User, IdentityRole>(options =>
             {
                 options.Password.RequireDigit = false;
                 options.Password.RequireLowercase = false;
@@ -50,9 +55,10 @@
                 .AddEntityFrameworkStores<TechShopDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.AddSession();
+
             services.AddSingleton<IShoppingCartManager, ShoppingCartManager>();
 
-            services.AddSession();
 
             services.AddAutoMapper();
 

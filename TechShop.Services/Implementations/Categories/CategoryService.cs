@@ -26,7 +26,7 @@
             return await this.db
             .Products
             .OrderBy(p => p.Name)
-            .Where(p => p.Name.ToLower().Contains(searchText.ToLower()))
+            .Where(p => p.Name.ToLower().Contains(searchText.ToLower()) || p.Name.ToLower()==searchText.ToLower())
             .ProjectTo<ProductListingsServiceModel>()
             .ToListAsync();
         }
